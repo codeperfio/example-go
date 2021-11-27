@@ -15,7 +15,7 @@ jobs:
       - name: Run Benchmark
         run: go test -bench=BenchmarkFib10 -cpuprofile profile.out
       - name: Check pprof is available on path
-          run: pprof --help
+        run: pprof --help
       - name: Get CodePerf Go utility
         run: bash <(curl -s https://raw.githubusercontent.com/codeperfio/pprof-exporter/main/get.sh)
       - name: Upload profile data to CodePerf
